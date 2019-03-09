@@ -1,0 +1,12 @@
+ios
+node_modules
+android
+__tests__
+.buckconfig
+.flowconfig
+.gitattributes
+.watchmanconfig
+app.json
+babel.config.js
+yarn.lock
+.idea/
