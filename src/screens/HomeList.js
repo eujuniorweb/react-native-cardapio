@@ -3,6 +3,10 @@ import {View,Image,TouchableHighlight, Text, StyleSheet, FlatList} from 'react-n
 
 export default class HomeList extends Component{
 
+    static navigationOptions = {
+        title: 'Restaurante Porrada Seca',
+    };
+
     constructor(props){
         super(props);
         this.state={

@@ -2,9 +2,15 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 import Main from "./screens/Main";
 
-const Navigator = createStackNavigator({
-    Main
-    });
+const AppNavigator = createStackNavigator({
+    Main:{
+        screen:Main
+    }
+    },{
+    defaultNavigationOptions:{
+        header:null
+    }
+});
 
-const AppContainer = createAppContainer(Navigator);
+const AppContainer = createAppContainer(AppNavigator);
 export default AppContainer;

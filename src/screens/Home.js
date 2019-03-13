@@ -9,11 +9,11 @@ import HomeProducts from "./HomeProducts";
 
 
 const Navigator = createStackNavigator({
-    HomeList,
+        HomeList:{
+            screen:HomeList
+        },
         HomeProducts
 
-    }
-);
+    });
 
-const AppContainer = createAppContainer(Navigator);
-export default AppContainer;
+export default Navigator;

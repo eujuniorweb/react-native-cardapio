@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import {View, Image, StyleSheet} from 'react-native';
 
-import {createBottomTabNavigator, createAppContainer} from 'react-navigation';
+import {createBottomTabNavigator} from 'react-navigation';
 
 import Home from './Home';
 import Contato from './Contato';
 import Horarios from './Horarios';
 import Sobre from './Sobre';
 
-const TabNavigator = createBottomTabNavigator({
+const AppTabNavigator = createBottomTabNavigator({
        Home,
         Contato,
         Horarios,
@@ -68,9 +68,7 @@ const TabNavigator = createBottomTabNavigator({
 
 );
 
-const AppContainer =createAppContainer(TabNavigator);
-
-export default AppContainer;
+export default AppTabNavigator;
 
 const styles = StyleSheet.create({
     icon:{

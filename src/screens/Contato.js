@@ -3,6 +3,10 @@ import {View, Image, StyleSheet, Text} from 'react-native';
 
 export default class Contato extends Component{
 
+    static navigationOptions = {
+        title:"Contato"
+    };
+
     render(){
         return(
             <View>
@@ -12,10 +16,3 @@ export default class Contato extends Component{
     }
 
 }
-
-const styles = StyleSheet.create({
-    icon:{
-        width:26,
-        height:26
-    }
-});
