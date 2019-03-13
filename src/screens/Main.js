@@ -3,24 +3,16 @@ import {View, Image, StyleSheet} from 'react-native';
 
 import {createBottomTabNavigator, createAppContainer} from 'react-navigation';
 
-import Home from './src/Home';
-import Contato from './src/Contato';
-import Horarios from './src/Horarios';
-import Sobre from './src/Sobre';
+import Home from './Home';
+import Contato from './Contato';
+import Horarios from './Horarios';
+import Sobre from './Sobre';
 
-const App = createBottomTabNavigator({
-        Home:{
-            screen:Home
-        },
-        Contato:{
-            screen:Contato
-        },
-        Horarios:{
-            screen:Horarios
-        },
-        Sobre:{
-            screen:Sobre
-        }
+const TabNavigator = createBottomTabNavigator({
+       Home,
+        Contato,
+        Horarios,
+        Sobre
     },{
         defaultNavigationOptions: ({ navigation }) => ({
             tabBarIcon: ({ focused, tintColor }) => {
@@ -30,8 +22,8 @@ const App = createBottomTabNavigator({
                         <Image
                             source={
                                 focused
-                                    ? require('./assets/images/home_azul.png')
-                                    : require('./assets/images/home_preto.png')
+                                    ? require('../../assets/images/home_azul.png')
+                                    : require('../../assets/images/home_preto.png')
                             }
                             style={styles.icon}
                         />
@@ -41,8 +33,8 @@ const App = createBottomTabNavigator({
                         <Image
                             source={
                                 focused
-                                    ? require('./assets/images/contato_azul.png')
-                                    : require('./assets/images/contato_preto.png')
+                                    ? require('../../assets/images/contato_azul.png')
+                                    : require('../../assets/images/contato_preto.png')
                             }
                             style={styles.icon}
                         />
@@ -52,8 +44,8 @@ const App = createBottomTabNavigator({
                         <Image
                             source={
                                 focused
-                                    ? require('./assets/images/horario_azul.png')
-                                    : require('./assets/images/horario_preto.png')
+                                    ? require('../../assets/images/horario_azul.png')
+                                    : require('../../assets/images/horario_preto.png')
                             }
                             style={styles.icon}
                         />
@@ -63,8 +55,8 @@ const App = createBottomTabNavigator({
                         <Image
                             source={
                                 focused
-                                    ? require('./assets/images/sobre_azul.png')
-                                    : require('./assets/images/sobre_preto.png')
+                                    ? require('../../assets/images/sobre_azul.png')
+                                    : require('../../assets/images/sobre_preto.png')
                             }
                             style={styles.icon}
                         />
@@ -76,14 +68,14 @@ const App = createBottomTabNavigator({
 
 );
 
-const AppContainer =createAppContainer(App);
+const AppContainer =createAppContainer(TabNavigator);
 
 export default AppContainer;
 
 const styles = StyleSheet.create({
-  icon:{
-    width:26,
-    height:26
-  }
+    icon:{
+        width:26,
+        height:26
+    }
 });
 

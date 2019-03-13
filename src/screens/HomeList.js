@@ -11,54 +11,54 @@ export default class HomeList extends Component{
                 {
                     key:'1',
                     title:'Prato Executivo',
-                    img:require('../assets/images/tipos/pe.png'),
+                    img:require('../../assets/images/tipos/pe.png'),
                     description:'Pratos a pronta entrega',
                     bg:'#0080ff',
                     products:[
-                        {name:'Frango',img:require('../assets/images/cardapio/pe/executivos_frang_.png')},
-                        {name:'Peixe',img:require('../assets/images/cardapio/pe/executivos_peix_.png')},
-                        {name:'Picanha',img:require('../assets/images/cardapio/pe/executivos_picanh_.png')}
+                        {name:'Frango',img:require('../../assets/images/cardapio/pe/executivos_frang_.png')},
+                        {name:'Peixe',img:require('../../assets/images/cardapio/pe/executivos_peix_.png')},
+                        {name:'Picanha',img:require('../../assets/images/cardapio/pe/executivos_picanh_.png')}
 
                     ]
                 },
                 {
                     key:'2',
                     title:'Saladas',
-                    img:require('../assets/images/tipos/saladas.png'),
+                    img:require('../../assets/images/tipos/saladas.png'),
                     description:'Pratos a pronta entrega',
                     bg:'#00ff40',
                     products:[
-                        {name:'Salada de Frango',img:require('../assets/images/cardapio/saladas/salada-fr.png')},
-                        {name:'Salada de Agua Doce',img:require('../assets/images/cardapio/saladas/salada_aguadoc_.png')},
-                        {name:'Salada de Salmão',img:require('../assets/images/cardapio/saladas/salada_salma.png')}
+                        {name:'Salada de Frango',img:require('../../assets/images/cardapio/saladas/salada-fr.png')},
+                        {name:'Salada de Agua Doce',img:require('../../assets/images/cardapio/saladas/salada_aguadoc_.png')},
+                        {name:'Salada de Salmão',img:require('../../assets/images/cardapio/saladas/salada_salma.png')}
 
                     ]
                 },
                 {
                     key:'3',
                     title:'Bebidas',
-                    img:require('../assets/images/tipos/bebidas.png'),
+                    img:require('../../assets/images/tipos/bebidas.png'),
                     description:'Bebidas de vários tipos',
                     bg:'#8904B1',
                     products:[
-                        {name:'Caipiroska',img:require('../assets/images/cardapio/bebidas/capirosc_3.png')},
-                        {name:'Cookie Cream',img:require('../assets/images/cardapio/bebidas/cookies_crea.png')},
-                        {name:'Morango Gelado',img:require('../assets/images/cardapio/bebidas/morango_gd.png')},
-                        {name:'Patra Delicia',img:require('../assets/images/cardapio/bebidas/patra.png')},
-                        {name:'Suco Fitness',img:require('../assets/images/cardapio/bebidas/suco_fitines_gd.png')}
+                        {name:'Caipiroska',img:require('../../assets/images/cardapio/bebidas/capirosc_3.png')},
+                        {name:'Cookie Cream',img:require('../../assets/images/cardapio/bebidas/cookies_crea.png')},
+                        {name:'Morango Gelado',img:require('../../assets/images/cardapio/bebidas/morango_gd.png')},
+                        {name:'Patra Delicia',img:require('../../assets/images/cardapio/bebidas/patra.png')},
+                        {name:'Suco Fitness',img:require('../../assets/images/cardapio/bebidas/suco_fitines_gd.png')}
 
                     ]
                 },
                 {
                     key:'4',
                     title:'Sobremesas',
-                    img:require('../assets/images/tipos/sobremesa.png'),
+                    img:require('../../assets/images/tipos/sobremesa.png'),
                     description:'Sobremesas de vários tipos',
                     bg:'#fcb81c',
                     products:[
-                        {name:'Brownie',img:require('../assets/images/cardapio/sobremesas/brownie_gd.png')},
-                        {name:'Creme Papaya',img:require('../assets/images/cardapio/sobremesas/creme_papaya_cassis_gd.png')},
-                        {name:'Delicia Gelada',img:require('../assets/images/cardapio/sobremesas/delicia_gelada_gd.png')}
+                        {name:'Brownie',img:require('../../assets/images/cardapio/sobremesas/brownie_gd.png')},
+                        {name:'Creme Papaya',img:require('../../assets/images/cardapio/sobremesas/creme_papaya_cassis_gd.png')},
+                        {name:'Delicia Gelada',img:require('../../assets/images/cardapio/sobremesas/delicia_gelada_gd.png')}
                     ]
                 }
             ]
@@ -66,7 +66,7 @@ export default class HomeList extends Component{
     }
 
     renderItem = ({item}) =>(
-        <TouchableHighlight onPress = {()=>{}} style={[styles.listaItem,{backgroundColor:item.bg}]}>
+        <TouchableHighlight onPress = {()=>{this.props.navigation.navigate('HomeProducts')}} style={[styles.listaItem,{backgroundColor:item.bg}]}>
             <View style={[styles.listaItem,{backgroundColor:item.bg}]}>
             <Image source={item.img} style={styles.listaImage}/>
             <View>

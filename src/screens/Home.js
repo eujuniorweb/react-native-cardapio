@@ -9,16 +9,8 @@ import HomeProducts from "./HomeProducts";
 
 
 const Navigator = createStackNavigator({
-    HomeList:{
-        screen:HomeList
-    },
-    HomeProducts:{
-        screen:HomeProducts
-    }
-},{
-    defaultNavigationOptions: {
-        title: 'Restaurante Fictício'
-    },
+    HomeList,
+        HomeProducts
 
     }
 );
